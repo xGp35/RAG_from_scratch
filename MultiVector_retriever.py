@@ -111,6 +111,7 @@ sub_docs = vectorstore.similarity_search(query,k=1)  # ø
 # sub_docs[0] - is a Document object that is one of the summary_docs. this summary_doc matched the most with the user query.
 
 retrieved_docs = retriever.invoke(query,n_results=1) # π
+# This will fetch the full document only. If you want the summary document, use the vectorstore.similarity_search method instead.
 retrieved_docs[0].page_content[0:500]
 
 # Step 7: prompt = build_prompt(contexts, user_query) -> Not present in the script
